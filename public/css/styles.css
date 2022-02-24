@@ -1,3 +1,13 @@
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+
+.mainImage {
+  text-align: center;
+
+}
 .footer-padding {
   padding-bottom: 60px;
 }
