@@ -3,11 +3,23 @@ html {
   position: relative;
 }
 
-
 .mainImage {
+  text-align: center;
+}
+
+.merchantDisplay{
   text-align: center;
 
 }
+
+.form-check
+input[type=checkbox] {
+            vertical-align: middle;
+            position: relative;
+            bottom: 1px;
+        }
+
+
 .footer-padding {
   padding-bottom: 60px;
 }

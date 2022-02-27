@@ -6,12 +6,15 @@
   <img  src="https://cdn-icons.flaticon.com/png/512/3065/premium/3065722.png?token=exp=1645659975~hmac=6edfa5a468801e4c03bb3b526ad86330" alt="logo">
   <p> <%=startingContent%> </p>
 
+ <form class="" action="/" method="post">
   <label for="name">Name</label>
-  <input type="text" placeholder="Enter your name" name="Name" >
+  <input type="text" name="postName" placeholder="Enter your name" name="Name" >
+
   <label for="number">Number</label>
-  <input type="number" placeholder="Enter your number" name="Number" >
+  <input type="number" name="postNumber" placeholder="Enter your number" name="Number" >
+
   <label for="Party">Party size</label>
-  <select name="dropdown" >
+  <select name="postParty">
     <option value="1" selected>1</option>
     <option value="2" selected>2</option>
     <option value="3" selected>3</option>
@@ -25,7 +28,10 @@
   </select>
 
 
-  <button type="button" name="button">Confirm</button>
+
+  <button type="submit" name="button">Confirm</button>
+</form>
+
 
 
 </div>

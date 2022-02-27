@@ -1,5 +1,39 @@
 <%- include("partials/header.ejs"); -%>
 
-<h1>Merchant</h1>
-<p> <%=merchantMessage%> </p>
+
+<div class="merchantDisplay">
+
+  <form class="merchantForm" action="/merchant" method="post">
+    <h1>Merchant</h1>
+    <p> <%=merchantMessage%> </p>
+
+  <% foundPartys.forEach(function(party){ %>
+
+
+    <div class="form-check">
+
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+        <%=party.name%>
+      </label>
+    </div>
+
+
+
+  </form>
+   <% }) %>
+
+   <form class="" action="/merchant" method="post">
+     <button type="button" class="btn btn-danger">Table is Ready</button>
+   </form>
+
+
+</div>
+
+
+
+
+
+
+
 <%- include("partials/footer"); -%>
