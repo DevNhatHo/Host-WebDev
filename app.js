@@ -134,12 +134,15 @@ app.post("/", function(req, res) {
 });
 
 app.post("/delete", function(req, res) {
-  const checkedItemId = req.body;
+
+  const checkedItemId = req.body.checkbox;
   console.log(checkedItemId);
 
-  Party.deleteOne(req.body, function(err) {
+
+  Party.findByIdAndRemove(checkedItemId, function(err) {
     if (!err) {
       console.log("Succesfully pinged party!");
+      console.log(checkedItemId);
       res.redirect("/merchant")
     }
   });
