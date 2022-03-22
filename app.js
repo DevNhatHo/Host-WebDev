@@ -68,9 +68,6 @@ app.get("/", function(req, res) {
       });
     } else {
       console.log("Array is not empty");
-      console.log(foundPartys[0].name);
-      console.log(foundPartys[3].number);
-      console.log(foundPartys[2].party);
 
 
     }
@@ -91,23 +88,23 @@ app.get("/", function(req, res) {
 
 
 app.get("/merchant", function(req, res) {
-Party.find({}, function(err, foundPartys) {
+  Party.find({}, function(err, foundPartys) {
 
-  console.log(foundPartys);
+    console.log(foundPartys);
 
-  if (foundPartys.length != 0) {
-
-
-    res.render("merchant", {
-      merchantMessage: merchantMessage,
-      foundPartys: foundPartys
+    if (foundPartys.length != 0) {
 
 
-    });
+      res.render("merchant", {
+        merchantMessage: merchantMessage,
+        foundPartys: foundPartys
 
 
-  };
-});
+      });
+
+
+    };
+  });
 
 
 });
@@ -133,6 +130,22 @@ app.post("/", function(req, res) {
     party: req.body.postParty
   });
   party.save();
+});
+
+app.post("/delete", function(req, res) {
+  const checkedItemId = req.body;
+  console.log(checkedItemId);
+
+  Party.deleteOne(req.body, function(err) {
+    if (!err) {
+      console.log("Succesfully pinged party!");
+      res.redirect("/merchant")
+    }
+  });
+
+
+
+
 });
 
 

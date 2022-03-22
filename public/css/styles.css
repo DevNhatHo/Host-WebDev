@@ -9,15 +9,11 @@ html {
 
 .merchantDisplay{
   text-align: center;
+  margin-left: 20px;
+  align-items: center;
 
 }
 
-.form-check
-input[type=checkbox] {
-            vertical-align: middle;
-            position: relative;
-            bottom: 1px;
-        }
 
 
 .footer-padding {

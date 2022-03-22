@@ -3,29 +3,27 @@
 
 <div class="merchantDisplay">
 
-  <form class="merchantForm" action="/merchant" method="post">
-    <h1>Merchant</h1>
-    <p> <%=merchantMessage%> </p>
+
+  <h1>Merchant</h1>
+  <p> <%=merchantMessage%> </p>
 
   <% foundPartys.forEach(function(party){ %>
+  <%   var fullPartyInfo = party.name +"| " + party.number + "| " + party.party; %>
 
+  <form action="/delete" method="post">
+    <div class="party">
 
-    <div class="form-check">
+      <input name ="checkbox "type="checkbox" value="<%=party._id%>"  onChange="this.form.submit()">
 
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-      <label class="form-check-label" for="flexCheckDefault">
-        <%=party.name%>
-      </label>
+        <%=fullPartyInfo%>
+
     </div>
 
-
-
   </form>
-   <% }) %>
 
-   <form class="" action="/merchant" method="post">
-     <button type="button" class="btn btn-danger">Table is Ready</button>
-   </form>
+  <% }) %>
+
+
 
 
 </div>
