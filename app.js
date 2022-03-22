@@ -130,6 +130,7 @@ app.post("/", function(req, res) {
     party: req.body.postParty
   });
   party.save();
+  res.redirect("/")
 });
 
 app.post("/delete", function(req, res) {
